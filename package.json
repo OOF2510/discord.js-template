@@ -1,0 +1,22 @@
+{
+  "name": "discord.js-template",
+  "description": "A basic discord.js bot template, command handler included",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/OOF2510/discord.js-template.git",
+  "author": "OOF2510 <64423517+OOF2510@users.noreply.github.com>",
+  "license": "MPL-2.0",
+  "scripts": {
+    "start": "nodemon",
+    "format": "prettier --no-config --write ."
+  },
+  "dependencies": {
+    "bufferutil": "^4.0.4",
+    "discord.js": "^13.1.0",
+    "utf-8-validate": "^5.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1"
+  }
+}
