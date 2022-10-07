@@ -1,4 +1,7 @@
 .git/
 .github/
 node_modules/
-*.json
+.yarn/
+.editorconfig
+.yarnrc.yml
+.pnp.*

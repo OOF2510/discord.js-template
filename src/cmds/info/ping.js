@@ -1,21 +1,16 @@
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+
 module.exports = {
-  name: "ping",
-  usage: "ping",
-  aliases: [ "pi", "botping" ],
-  desc: "Gets the ping of the bot",
-  async execute(
-    msg,
-    args,
-    client,
-    Discord
-  ) {
-    const pingEm = new Discord.MessageEmbed()
-      .setTitle(`Pong!`)
-      .setAuthor(botNick, client.user.avatarURL())
-      .addFields(
-        { name: `Bot Ping`, value: `\`${client.ws.ping}ms\``, inline: true }
-      )
-      .setColor("RANDOM");
+  data: new SlashCommandBuilder()
+    .setName("ping")
+    .setDescription("Returns the ping of the bot"),
+  async execute(interaction, client, config, db, Discord, allowed) {
+    let msg = interaction;
+
+    let pingEm = new EmbedBuilder()
+      .setColor("Random")
+      .setTitle("Ping!")
+      .setDescription(`${client.ws.ping}ms`);
 
     msg.reply({ embeds: [pingEm] });
   },

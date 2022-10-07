@@ -1,5 +1,4 @@
 {
   "token": "your_discord_bot_token",
   "clientID": "your_discord_bot_client_id",
-  "prefix": "your_discord_bot_prefix"
 }
